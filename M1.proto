@@ -1,0 +1,19 @@
+
+// 指定版本
+syntax = "proto3";
+
+package m1;  // 对Golang没用
+option go_package = ".;myproto";
+// option go_package = "genproto-go/taptap/community/feed;feed";
+
+// 请求消息格式
+message M1 {
+    uint64 userId       = 3;
+    string deviceId     = 4;
+
+    int64 from           = 5;
+    int64 limit          = 6;
+
+    string scene         = 7;
+    string action        = 8;
+}
